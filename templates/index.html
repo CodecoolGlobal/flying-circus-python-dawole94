@@ -9,5 +9,13 @@
 </head>
 <body>
 <h1>Index page</h1>
+{% if session.user_email %}
+    <h2>You're logged in.</h2>
+    {{ session.user_email }}
+    <a href="/logout">Logout</a>
+    <a href="/test">Test</a>
+{% else %}
+    <a href="/login">Login</a>
+{% endif %}
 </body>
 </html>

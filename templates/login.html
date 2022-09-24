@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container flex-column-center ">
+    {% if message %}
+        <p class="error">{{ message }}</p>
+    {% endif %}
+    <form method="POST" class="flex-column-center ">
+        <label>EMAIL: </label>
+        <input type="email" name="email">
+        <label>PASSWORD: </label>
+        <input type="password" name="password">
+
+        <input type="submit" value="login">
+    </form>
+</div>
+</body>
+</html>
